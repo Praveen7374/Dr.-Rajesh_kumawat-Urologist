@@ -1,0 +1,50 @@
+:root{--bg:#f5f8fb;--card:#fff;--text:#12263a;--muted:#566b80;--blue:#1b6ca8;--navy:#12263a;--rust:#b5532a;--line:#d8e1ec;--ok:#18794e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1521;--card:#12212f;--text:#e8f0f8;--muted:#95a9bd;--navy:#07101a;--line:#233748;--blue:#4b9ad8}}
+:root[data-theme="dark"]{--bg:#0a1521;--card:#12212f;--text:#e8f0f8;--muted:#95a9bd;--navy:#07101a;--line:#233748;--blue:#4b9ad8}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.bar{background:var(--rust);color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:8px 12px}
+.bar a{color:#fff}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+.hero{background:var(--navy);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:center;padding-top:20px;padding-bottom:44px}
+.top{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.top b{font-size:1rem}.top a{font-weight:700;text-decoration:none;font-size:.9rem}
+h1{font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.12;margin:10px 0 12px}
+.hero p{color:#c5d5e6;margin:0 0 14px;max-width:38ch}
+.facts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:6px;color:#e9f1fa}
+.facts li{border-left:3px solid var(--rust);padding-left:10px}
+.b{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:800;text-decoration:none;margin:4px 6px 0 0}
+.b.r{background:var(--rust);color:#fff}.b.o{border:2px solid #7f9dbb;color:#fff}
+.photo{width:100%;border-radius:12px;display:block;aspect-ratio:4/3;object-fit:cover}
+section{padding:36px 0;border-bottom:1px solid var(--line)}
+h2{margin:0 0 14px;font-size:1.5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;max-width:680px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.full{grid-column:1/-1}
+label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:4px;font-weight:700}
+input,select,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.go{width:100%;margin-top:14px;border:0;border-radius:10px;padding:14px;font:inherit;font-weight:800;background:var(--blue);color:#fff;cursor:pointer}
+.err{color:#dc2626;font-size:.88rem;min-height:1.1em;margin-top:8px}
+.note{font-size:.8rem;color:var(--muted);margin:8px 0 0}
+.done{display:none;margin-top:16px;border:2px solid var(--ok);border-radius:12px;padding:14px}
+.done h3{margin:0 0 8px;color:var(--ok)}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:.92rem}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:700}
+.done .b{margin-top:12px;background:#25d366;color:#04361a}
+.drc{display:flex;gap:18px;align-items:center}
+.drc img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);flex:none}
+.drc h3{margin:0;font-size:1.3rem}.drc p{margin:2px 0;color:var(--muted)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.info div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:.85rem;color:var(--muted)}
+.info b{display:block;font-size:1.05rem;color:var(--blue)}
+.svc{list-style:none;padding:0;margin:0;columns:2;column-gap:30px}
+.svc li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.map{display:inline-block;margin-top:10px;background:var(--blue);color:#fff;text-decoration:none;padding:11px 18px;border-radius:10px;font-weight:700}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:18px 0 26px}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.svc{columns:1}.info{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

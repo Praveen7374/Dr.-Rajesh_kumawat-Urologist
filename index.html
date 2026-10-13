@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chirayu Hospital, Jaipur – Dr. Rajesh Kumar Kumawat (Urologist)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar">Appointment ke liye call: <a id="barTel" href="#"></a></div>
+<div class="hero"><div class="wrap">
+  <div class="top"><b id="hName"></b><a href="#book">Appointment</a></div>
+  <div>
+    <h1>Urology ke liye Chirayu Hospital me pehle se appointment lein.</h1>
+    <p>Kidney stone, prostate aur peshab ki takleef ke ilaaj ke liye Dr. Rajesh Kumar Kumawat se milein.</p>
+    <ul class="facts"><li id="fTime"></li><li id="fFee"></li><li id="fAddr"></li></ul>
+    <a class="b r" href="#book">Appointment book karein</a><a class="b o" id="tel1" href="#"></a>
+  </div>
+  <div><img class="photo" src="images/hospital.jpg" alt="Chirayu Hospital ki building, Hathoj, Jaipur"></div>
+</div></div>
+
+<div class="wrap">
+<section id="book">
+  <h2>Appointment book karein</h2>
+  <div class="card">
+    <form id="f" novalidate>
+      <div class="grid">
+        <div><label for="name">Patient ka naam</label><input id="name" autocomplete="name" maxlength="60" placeholder="Naam likhein"></div>
+        <div><label for="phone">Mobile number</label><input id="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10 digit number"></div>
+        <div><label for="age">Umar</label><input id="age" type="number" min="0" max="110" placeholder="Jaise: 45"></div>
+        <div><label for="doc">Doctor</label><select id="doc"></select></div>
+        <div><label for="date">Date</label><input id="date" type="date"></div>
+        <div><label for="slot">Time</label><select id="slot"></select></div>
+        <div class="full"><label for="prob">Takleef (optional)</label><textarea id="prob" rows="2" maxlength="200" placeholder="Jaise: peshab me dikkat, pathri ka dard"></textarea></div>
+      </div>
+      <div class="err" id="err" role="alert"></div>
+      <button class="go" type="submit">Appointment confirm karein</button>
+      <p class="note" id="openNote"></p>
+    </form>
+    <div class="done" id="done">
+      <h3>Appointment request ho gayi</h3>
+      <dl>
+        <dt>Patient</dt><dd id="d1"></dd><dt>Doctor</dt><dd id="d2"></dd>
+        <dt>Date</dt><dd id="d3"></dd><dt>Time</dt><dd id="d4"></dd>
+        <dt>Counter</dt><dd id="d5"></dd><dt>Fees</dt><dd id="d6"></dd>
+        <dt>Pata</dt><dd id="d7"></dd>
+      </dl>
+      <a class="b" id="act" target="_blank" rel="noopener"></a>
+      <p class="note">Is screen ka screenshot rakh lein.</p>
+    </div>
+  </div>
+</section>
+
+<section id="doctor">
+  <h2>Hamare doctor</h2>
+  <div class="drc">
+    <img src="images/doctor.jpg" alt="Dr. Rajesh Kumar Kumawat">
+    <div><h3>Dr. Rajesh Kumar Kumawat</h3><p>Urologist, Andrologist & Renal Transplant Surgeon</p><p>Lagbhag 10 saal ka anubhav (healthcare aur urology me)</p></div>
+  </div>
+  <div class="info">
+    <div><b id="iTime"></b>Somvaar se Shanivaar<br>Ravivaar band</div>
+    <div><b id="iFee"></b>Consultation fees</div>
+    <div><b>10 saal</b>Anubhav</div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Ilaaj aur suvidhayein</h2>
+  <ul class="svc">
+    <li>Minimally invasive urology aur laser se pathri ki surgery</li>
+    <li>Kidney stone (gurde ki pathri) ka ilaaj</li>
+    <li>Prostate badhna (BPH) ka ilaaj</li>
+    <li>Kidney aur bladder cancer ki dekhbhal</li>
+    <li>Peshab ki nali aur bladder ki bimariyan</li>
+    <li>Urethral stricture aur reconstructive urology</li>
+    <li>Purush yaun swasthya (Andrology)</li>
+    <li>Kidney transplant</li>
+  </ul>
+</section>
+
+<section id="visit" style="border:0">
+  <h2>Hospital kahan hai</h2>
+  <p style="margin:0 0 6px"><b>Chirayu Hospital</b><br><span id="addr"></span></p>
+  <p style="margin:0">Phone: <a id="tel2" href="#"></a></p>
+  <a class="map" id="map" target="_blank" rel="noopener" href="#">Google Maps me dekhein</a>
+</section>
+<footer id="foot"></footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
